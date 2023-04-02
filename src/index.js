@@ -2,7 +2,7 @@ import './css/common.css';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 import { getRefs } from './js/getRefs';
-// import { createImageEl } from './js/markupGallery';
+
 import NewsApiService from './js/fetchApi';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -101,9 +101,9 @@ function createImageEl(hits) {
 };
     
 
-// function renderGallery(images) {
-//   refs.container.insertAdjacentHTML('beforeend', createImageEl('hits'));
-// };
+function renderGallery(images) {
+  refs.container.insertAdjacentHTML('beforeend', createImageEl('hits'));
+};
 
 function resetRenderGallery() {
     refs.container.innerHTML = '';
