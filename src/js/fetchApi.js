@@ -21,9 +21,15 @@ export default class NewsApiService {
       per_page: this.perPage,
       page: this.page,
     });
-    const url = `${BASE_URL}/?${params}`;
-    this.stepPage();
-    return await axios.get(url);
+    try {
+      const url = `${BASE_URL}/?${params}`;
+      this.stepPage();
+      return await axios.get(url);
+    }
+    catch(e){
+      return console.log('err- ', e);
+    }
+    
     
   };
 
